@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - Magenta Makeup</title>
+    <link rel="icon" href="pictures/logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            padding-top: 80px;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(214, 0, 86, 0.3);
+        }
+
+        .logo-img1 {
+            height: 70px;
+            width: 180px;
+            max-width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+            font-size: 18px;
+            white-space: nowrap;
+        }
+
+        nav ul li a:hover {
+            background-color: #e5107a;
+        }
+
+        .hero {
+            min-height: 400px;
+            background-image: linear-gradient(rgba(196, 18, 89, 0), rgba(196, 42, 104, 0.158)), url('pictures/fondo3.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .prosada {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #e5107a;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .prosada2 {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #e5107a;
+            text-shadow: 
+            -1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white,
+            1px -1px 0 white;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #e5107a;
+            font-size: 32px;
+        }
+
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #e5107a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Estilos específicos para el manual */
+        .manual-step {
+            margin-bottom: 50px;
+            padding: 25px;
+            background-color: rgba(229, 16, 122, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #e5107a;
+        }
+
+        .manual-step h3 {
+            color: #e5107a;
+            margin-bottom: 20px;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .manual-step p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .manual-step ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .manual-step li {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .manual-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid rgba(229, 16, 122, 0.3);
+        }
+
+        .feature-highlight {
+            background-color: rgba(229, 16, 122, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 3px solid #e5107a;
+        }
+
+        .tip-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px dashed #e5107a;
+        }
+
+        .tip-box h4 {
+            color: #e5107a;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .social-demo {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .social-demo-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            border: 2px solid #e5107a;
+            object-fit: cover;
+        }
+
+        .social2-demo-img {
+            width: 450px;
+            height: 300px;
+            border-radius: 10px;
+            border: 2px solid #e5107a;
+            object-fit: cover;
+        }
+
+        /* Estilo para el botón de regresar */
+        .back-btn {
+            background-color: #e5107a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: #d15da1;
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            .logo-img1 {
+                height: 50px;
+                width: 140px;
+            }
+            
+            nav ul {
+                flex-wrap: nowrap;
+                justify-content: center;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 5px 0;
+            }
+            
+            nav ul li {
+                margin: 0 8px;
+                flex-shrink: 0;
+            }
+            
+            nav ul li a {
+                font-size: 14px;
+                padding: 6px 10px;
+                white-space: nowrap;
+            }
+            
+            .hero {
+                background-image: linear-gradient(rgba(196, 18, 89, 0), rgba(196, 42, 104, 0.158)), url('pictures/fondo.png');
+                min-height: 350px;
+                background-position: center;
+                height: 400px;
+                margin-top: 25px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .social-demo-img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* MEDIA QUERY MEJORADA PARA 600PX */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            .logo {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            
+            .logo-img1 {
+                margin-bottom: 10px;
+                height: 45px;
+                width: 120px;
+            }
+            
+            nav ul {
+                width: 100%;
+                justify-content: space-around;
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+            
+            nav ul li {
+                margin: 0;
+            }
+            
+            nav ul li a {
+                font-size: 13px;
+                padding: 5px 8px;
+                white-space: nowrap;
+            }
+            
+            .hero {
+                background-image: linear-gradient(rgba(196, 18, 89, 0), rgba(196, 42, 104, 0.158)), url('pictures/fondo5.png');
+                min-height: 300px;
+                background-position: center;
+                height: 350px;
+                margin-top: 15px;
+                padding: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 26px;
+                margin-bottom: 15px;
+            }
+            
+            .hero p {
+                font-size: 15px;
+                padding: 0 15px;
+                margin-bottom: 10px;
+            }
+            
+            .prosada, .prosada2 {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+            
+            .content-box {
+                padding: 20px 15px;
+            }
+            
+            .manual-step {
+                padding: 20px 15px;
+                margin-bottom: 30px;
+            }
+            
+            .manual-step h3 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            
+            .manual-step p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            
+            .manual-step ul {
+                margin-left: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .manual-step li {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+            
+            .feature-highlight, .tip-box {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .tip-box h4 {
+                font-size: 18px;
+            }
+            
+            .social-demo {
+                gap: 15px;
+                margin: 20px 0;
+            }
+            
+            .social-demo-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .social2-demo-img {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 15px;
+            }
+            
+            .back-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero {
+                min-height: 250px;
+                margin-top: 10px;
+                height: 300px;
+            }
+            
+            .hero h1 {
+                font-size: 22px;
+            }
+            
+            .hero p {
+                font-size: 14px;
+            }
+            
+            nav ul li a {
+                font-size: 12px;
+                padding: 4px 6px;
+            }
+            
+            .social-demo-img {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .social2-demo-img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="pictures/magenta.png" alt="Magenta Makeup" class="logo-img1">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="back-btn">Regresar al Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div>
+            <h1>MANUAL DE USUARIO</h1>
+            <p>APRENDE A UTILIZAR TODAS LAS FUNCIONALIDADES</p>
+            <p class="prosada">DE NUESTRO SITIO WEB</p>
+        </div>
+    </section>
+    
+    <section id="manual" class="container">
+        <h2 class="section-title">Guía Completa de Navegación</h2>
+        <div class="content-box">
+            <p>Este manual te guiará paso a paso para aprovechar al máximo todas las funcionalidades de nuestro sitio web de Magenta Makeup.</p>
+            
+            <!-- Sección de Navegación -->
+            <div class="manual-step">
+                <h3>Navegación Principal</h3>
+                <p>La barra de navegación superior te permite acceder a todas las secciones principales del sitio:</p>
+                <ul>
+                    <li><strong>Inicio:</strong> Página principal con información general y tendencias</li>
+                    <li><strong>Servicios:</strong> Información sobre cursos y servicios de maquillaje</li>
+                    <li><strong>Productos:</strong> Catálogo completo de nuestras marcas y productos</li>
+                    <li><strong>Manual:</strong> Esta guía de usuario</li>
+                </ul>
+                
+                <div class="feature-highlight">
+                    <p><strong>Consejo:</strong> El menú de navegación permanece fijo en la parte superior, por lo que siempre está accesible mientras navegas por el sitio.</p>
+                </div>
+            </div>
+            
+            <div class="manual-step">
+                <h3>Botón de Redes Sociales</h3>
+                <p>En las demás páginas del sitio, encontrarás un botón circular de color magenta en el lado izquierdo que es el acceso directo a nuestras redes sociales.</p>
+                
+                <div class="social-demo">
+                    <img src="pictures/1.PNG" alt="Botón de redes sociales cerrado" class="social-demo-img">
+                    <img src="pictures/5.PNG" alt="Botón de redes sociales abierto" class="social-demo-img">
+                </div>
+                
+                <div class="tip-box">
+                    <h4>Funcionamiento del Botón de Redes</h4>
+                    <p>Al hacer clic en el botón, se despliegan los iconos de nuestras redes sociales. Puedes hacer clic en cualquiera de ellos para visitar nuestras páginas oficiales.</p>
+                    <p>El menú de redes sociales está disponible en todas las páginas del sitio, por lo que siempre puedes conectarte con nosotros fácilmente.</p>
+                </div>
+            </div>
+            
+            <!-- Sección de Productos -->
+            <div class="manual-step">
+                <h3>Navegación por Marcas</h3>
+                <p>En la página de Productos, puedes explorar nuestras marcas exclusivas:</p>
+                <ul>
+                    <li><strong>Aria Cosmetics:</strong> Productos innovadores</li>
+                    <li><strong>Dolce Bella:</strong> Elegancia y sofisticación</li>
+                    <li><strong>Mils:</strong> Tecnología profesional</li>
+                    <li><strong>Salome:</strong> Productos premium</li>
+                    <li><strong>Trendy:</strong> Tendencias actuales</li>
+                    <li><strong>Bioaqua:</strong> Cuidado de la piel</li>
+                </ul>
+                
+                <div class="tip-box">
+                    <h4>Cómo usar los menús desplegables</h4>
+                    <p>Haz clic en cualquier logo de marca para ver las opciones disponibles: catálogos, productos destacados y ofertas especiales.</p>
+                </div>
+                
+                <div class="social-demo">
+                    <img src="pictures/11.PNG" alt="Menú desplegable de productos" class="social2-demo-img">
+                    <img src="pictures/3.PNG" alt="Menú desplegable de productos" class="social2-demo-img">
+                </div>
+                
+                <div class="feature-highlight">
+                    <p><strong>Funcionamiento del Botón de Productos:</strong> Al hacer clic en cualquiera de los logos de las marcas, se despliega un menú con opciones específicas como catálogos completos, productos destacados y ofertas especiales. Esto te permite acceder rápidamente a la información que más te interesa de cada marca.</p>
+                </div>
+            </div>
+            
+            <div class="manual-step">
+                <h3>Explorar por Categorías</h3>
+                <p>Puedes filtrar productos por categoría para encontrar exactamente lo que necesitas:</p>
+                <ul>
+                    <li><strong>Labios:</strong> Labiales, gloss, delineadores</li>
+                    <li><strong>Ojos:</strong> Sombras, máscaras, delineadores</li>
+                    <li><strong>Rostro:</strong> Bases, correctores, rubores</li>
+                    <li><strong>Brochas y Accesorios:</strong> Herramientas profesionales</li>
+                </ul>
+            </div>
+            
+            <div class="manual-step">
+                <h3>Información de Productos</h3>
+                <p>Cada producto incluye información detallada:</p>
+                <ul>
+                    <li>Descripción completa</li>
+                    <li>Características principales</li>
+                    <li>Instrucciones de uso</li>
+                    <li>Botón para ver más detalles</li>
+                </ul>
+            </div>
+        
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy;Magenta Makeup C.A Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
