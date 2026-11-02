@@ -1,0 +1,194 @@
+/* Help / Manual de usuario (index1.html). Requiere estilo.css */
+
+.hero {
+    min-height: clamp(380px, 30vw, 500px);
+}
+
+.hero h1 {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.75rem, 1.2rem + 6.4vw, 6.25rem);
+    line-height: 1.04;
+    letter-spacing: -.02em;
+    text-wrap: balance;
+    margin-bottom: 18px;
+}
+
+.back-btn {
+    margin-top: 26px;
+}
+
+/* Indice lateral + contenido */
+.manual-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: start;
+}
+
+.manual-index {
+    position: sticky;
+    top: 100px;
+}
+
+.manual-index ol {
+    list-style: none;
+    counter-reset: indice;
+    border-left: 1px solid var(--line);
+}
+
+.manual-index li {
+    counter-increment: indice;
+}
+
+.manual-index a {
+    display: block;
+    padding: 9px 0 9px 18px;
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    color: var(--muted);
+    font-size: .9688rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+
+.manual-index a::before {
+    content: counter(indice) ". ";
+    color: var(--pink);
+}
+
+.manual-index a:hover {
+    color: #fff;
+    border-left-color: var(--pink);
+}
+
+.manual-steps {
+    counter-reset: paso;
+}
+
+.manual-step {
+    counter-increment: paso;
+    padding-block: clamp(30px, 4vw, 52px);
+    border-top: 1px solid var(--line);
+}
+
+.manual-step:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.manual-step h3 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.625rem);
+    line-height: 1.12;
+    margin-bottom: 14px;
+    text-wrap: balance;
+}
+
+.manual-step h3::before {
+    content: counter(paso);
+    display: block;
+    margin-bottom: 4px;
+    font-style: italic;
+    color: var(--magenta);
+}
+
+.manual-step p {
+    max-width: 62ch;
+    margin-bottom: 14px;
+    color: var(--muted);
+    text-wrap: pretty;
+}
+
+.manual-step ul {
+    margin: 0 0 18px;
+    list-style: none;
+}
+
+.manual-step li {
+    position: relative;
+    max-width: 62ch;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+.manual-step li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: .72em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--magenta);
+}
+
+.feature-highlight,
+.tip-box {
+    margin-top: 22px;
+    padding: clamp(18px, 2.4vw, 28px);
+    border-radius: 14px;
+}
+
+.feature-highlight {
+    background: var(--ink-3);
+}
+
+.tip-box {
+    background: var(--ink-2);
+    box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.tip-box h4 {
+    margin-bottom: 8px;
+    color: var(--pink);
+    font-size: .8125rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.feature-highlight p:last-child,
+.tip-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Capturas del sitio */
+.social-demo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 16px;
+    margin-block: 22px;
+}
+
+.social-demo-img,
+.social2-demo-img {
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px var(--line), 0 16px 38px rgba(70, 4, 37, .45);
+    height: auto;
+}
+
+.social-demo-img {
+    width: clamp(120px, 18vw, 220px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.social2-demo-img {
+    width: min(100%, 700px);
+}
+
+@media (max-width: 960px) {
+    .manual-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .manual-index {
+        position: static;
+    }
+}

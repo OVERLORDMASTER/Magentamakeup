@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magenta Makeup</title>
+    <title>Productos | Magenta Makeup</title>
+    <meta name="description" content="Productos para labios, ojos, rostro, brochas y accesorios. Catálogos de Aria Cosmetics, Dolce Bella, Mils, Salome, Trendy y Bioaqua.">
+    <meta name="theme-color" content="#0c0609">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="estilo4.css">
     <link rel="icon" href="pictures/logo.png">
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <header>
         <div class="logo">
-            <img src="pictures/magenta.png" alt="Magenta Makeup" class="logo-img1">
+            <a class="logo-link" href="index.html"><img src="pictures/web/logo-magenta.png" alt="Magenta Makeup" class="logo-img1" width="640" height="236"></a>
             
-            <nav>
+            <nav aria-label="Principal">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="index3.html">Servicios</a></li>
-                    <li><a href="index4.html">Productos</a></li>
+                    <li><a href="index4.html" aria-current="page">Productos</a></li>
                     <li><a href="index1.html">Help</a></li>
                 </ul>
             </nav>
@@ -24,87 +33,99 @@
     </header>
 
     <div class="menu-container">
-        <input type="checkbox" id="menuToggle">
+        <input type="checkbox" id="menuToggle" aria-label="Redes Sociales">
         <label for="menuToggle" class="menu-toggle">
-            <img class="icons2 icon-inactive" src="pictures/social-media_10404224.png" alt="Redes Sociales">
-            <img class="icons2 icon-active" src="pictures/social-media2_10404224.png" alt="Redes Sociales">
+            <img class="icons2 icon-inactive" src="pictures/social-media_10404224.png" alt="">
+            <img class="icons2 icon-active" src="pictures/social-media2_10404224.png" alt="">
         </label>
         <div class="menu-items">
-            <a href="https://vm.tiktok.com/ZMHc3bUWTcK2Q-zquts/" class="menu-item">
+            <a href="https://vm.tiktok.com/ZMHc3bUWTcK2Q-zquts/" class="menu-item" target="_blank" rel="noopener" title="TikTok">
                 <img class="icons" src="pictures/tiktok.png" alt="TikTok">
             </a>
-            <a href="https://www.instagram.com/magenta.ve.oficial?igsh=MXI3NWVvNzRzeTd2cw==" class="menu-item">
-                <img class="icons" src="pictures/ing.svg" alt="Instagram">
+            <a href="https://www.instagram.com/magenta.ve.oficial?igsh=MXI3NWVvNzRzeTd2cw==" class="menu-item" target="_blank" rel="noopener" title="Instagram @magenta.ve.oficial">
+                <img class="icons" src="pictures/ing.svg" alt="Instagram @magenta.ve.oficial">
             </a>
-            <a href="https://wa.me/+584120145349" class="menu-item">
+            <a href="https://wa.me/584120145349" class="menu-item" target="_blank" rel="noopener" title="WhatsApp">
                 <img class="icons" src="pictures/what.svg" alt="WhatsApp">
             </a>
-            <a href="https://www.instagram.com/solomayoristas.ve?igsh=MW9tdTFwNzk2dTkxdg==" class="menu-item">
-                <img class="icons" src="pictures/ing.svg" alt="Instagram">
+            <a href="https://www.instagram.com/solomayoristas.ve?igsh=MW9tdTFwNzk2dTkxdg==" class="menu-item" target="_blank" rel="noopener" title="Instagram @solomayoristas.ve">
+                <img class="icons" src="pictures/ing.svg" alt="Instagram @solomayoristas.ve">
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61551024595361" class="menu-item">
+            <a href="https://www.facebook.com/profile.php?id=61551024595361" class="menu-item" target="_blank" rel="noopener" title="Facebook">
                 <img class="icons" src="pictures/face.svg" alt="Facebook">
             </a>
         </div>
     </div>
     
+    <main id="contenido">
     <section class="hero">
-        <div>
+        <div class="hero-products">
             <h1>PRODUCTOS</h1>
             <p class="prosada2">NUESTRAS MARCAS</p>
             
             <ul class="menus">
                 <li>
-                    <a href="https://drive.google.com/file/d/1N1BHRSTvEkjZV0a1WuJFGElOrKooBYi2/view?usp=drive_link" class="buttons">
-                        <img src="pictures/archivosdemagenta/ARIA.png" alt="Aria Cosmetics">
+                    <a href="https://drive.google.com/file/d/1N1BHRSTvEkjZV0a1WuJFGElOrKooBYi2/view?usp=drive_link" class="buttons" target="_blank" rel="noopener">
+                        <img src="pictures/archivosdemagenta/ARIA.png" alt="Aria Cosmetics" width="1024" height="410">
                     </a>
                 </li>
 
                 <li>
-                    <a href="https://drive.google.com/file/d/1yrpwdIOAbBCpQgJeytBfHBhG-1em65Rg/view?usp=drive_link" class="buttons">
-                        <img src="pictures/archivosdemagenta/DOLCEBELLA.png" alt="Dolce Bella">
+                    <a href="https://drive.google.com/file/d/1yrpwdIOAbBCpQgJeytBfHBhG-1em65Rg/view?usp=drive_link" class="buttons" target="_blank" rel="noopener">
+                        <img src="pictures/archivosdemagenta/DOLCEBELLA.png" alt="Dolce Bella" width="1024" height="410">
                     </a>
                 </li>
 
                 <li>
-                    <a href="https://drive.google.com/file/d/1HJxzKWBA-yWTGRrl6U5LEu_uiW14-boH/view?usp=drive_link" class="buttons">
-                        <img src="pictures/archivosdemagenta/MILS.png" alt="Mils">
+                    <a href="https://drive.google.com/file/d/1HJxzKWBA-yWTGRrl6U5LEu_uiW14-boH/view?usp=drive_link" class="buttons" target="_blank" rel="noopener">
+                        <img src="pictures/archivosdemagenta/MILS.png" alt="Mils" width="1024" height="410">
                     </a>
                 </li>
 
                 <li>
-                    <a href="https://drive.google.com/file/d/1EOqtU-MGvP9P1uem4sSmIJ5-Dy3nkQCG/view?usp=drive_link" class="buttons">
-                        <img src="pictures/archivosdemagenta/SALOME.png" alt="Salome">
+                    <a href="https://drive.google.com/file/d/1EOqtU-MGvP9P1uem4sSmIJ5-Dy3nkQCG/view?usp=drive_link" class="buttons" target="_blank" rel="noopener">
+                        <img src="pictures/archivosdemagenta/SALOME.png" alt="Salome" width="1024" height="410">
                     </a>
                 </li>
 
                 <li>
-                    <a href="https://drive.google.com/file/d/14ozCz-UHmaAv4IvN2ZwwTJdxy8eGJfIr/view?usp=drive_link" class="buttons">
-                        <img src="pictures/archivosdemagenta/TRENDY.png" alt="Trendy">
+                    <a href="https://drive.google.com/file/d/14ozCz-UHmaAv4IvN2ZwwTJdxy8eGJfIr/view?usp=drive_link" class="buttons" target="_blank" rel="noopener">
+                        <img src="pictures/archivosdemagenta/TRENDY.png" alt="Trendy" width="1024" height="410">
                     </a>
                 </li>
 
                 <li>
-                    <a href="https://drive.google.com/file/d/1_ouXJyOEgOpZRkmHQlDr9aSXpQqeXAYs/view?usp=drive_link" class="buttons">
-                        <img src="pictures/archivosdemagenta/bioaqua.png" alt="Bioaqua">
+                    <a href="https://drive.google.com/file/d/1_ouXJyOEgOpZRkmHQlDr9aSXpQqeXAYs/view?usp=drive_link" class="buttons" target="_blank" rel="noopener">
+                        <img src="pictures/archivosdemagenta/bioaqua.png" alt="Bioaqua" width="1024" height="410">
                     </a>
                 </li>
             </ul>
         </div>
     </section>
     
+    <nav class="category-nav" aria-label="Categorías">
+        <ul class="container">
+            <li><a href="#labios">Labios</a></li>
+            <li><a href="#ojos">Ojos</a></li>
+            <li><a href="#rostro">Rostro</a></li>
+            <li><a href="#brochas">Brochas y Accesorios</a></li>
+        </ul>
+    </nav>
+
     <section id="products-by-category" class="container">
-        <h2 class="section-title">Explora Nuestros Productos</h2>
-        <div class="content-box">
-            <p>Descubre nuestra amplia gama de productos de maquillaje organizados por categorías para facilitar tu búsqueda.</p>
+        <div class="section-head reveal">
+            <h2 class="section-title">Explora Nuestros Productos</h2>
+            <p class="section-lead">Descubre nuestra amplia gama de productos de maquillaje organizados por categorías para facilitar tu búsqueda.</p>
+        </div>
+        <div class="section-body">
             
             <div class="category-content" id="labios">
-                <h3>Productos para Labios</h3>
+                <h3 class="category-title">Productos para Labios</h3>
                 <div class="products-grid">
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Labial Líquido Mate" class="product-img">
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Labial Líquido Mate" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Labial Líquido Mate</h3>
+                            <h4 class="product-name">Labial Líquido Mate</h4>
                             <p class="product-description">Formula de larga duración, no se transfiere y disponible en 12 tonos vibrantes.</p>
                             <ul class="product-features">
                                 <li>Duración hasta 12 horas</li>
@@ -112,11 +133,11 @@
                                 <li>Acabado mate profesional</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gloss Labial" class="product-img">
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Gloss Labial" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Gloss Labial Brillante</h3>
+                            <h4 class="product-name">Gloss Labial Brillante</h4>
                             <p class="product-description">Brillo intenso con efecto hidratante y acabado no pegajoso.</p>
                             <ul class="product-features">
                                 <li>Efecto hidratante</li>
@@ -124,11 +145,11 @@
                                 <li>Con vitamina E</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/15734838227365.jpg" alt="Lápiz Labial" class="product-img">
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/web/delineador-labios.webp" alt="Lápiz Labial" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Lápiz Delineador de Labios</h3>
+                            <h4 class="product-name">Lápiz Delineador de Labios</h4>
                             <p class="product-description">Precisión máxima para definir y realzar la forma de tus labios.</p>
                             <ul class="product-features">
                                 <li>Punta ultrafina</li>
@@ -136,17 +157,17 @@
                                 <li>Larga duración</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
             
             <div class="category-content" id="ojos">
-                <h3>Productos para Ojos</h3>
+                <h3 class="category-title">Productos para Ojos</h3>
                 <div class="products-grid">
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/sombra.jpeg" alt="Paleta de Sombras" class="product-img">
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/archivosdemagenta/sombra.jpeg" alt="Paleta de Sombras" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Paleta de Sombras Profesional</h3>
+                            <h4 class="product-name">Paleta de Sombras Profesional</h4>
                             <p class="product-description">15 tonos altamente pigmentados, desde neutros hasta colores vibrantes.</p>
                             <ul class="product-features">
                                 <li>Alta pigmentación</li>
@@ -154,11 +175,11 @@
                                 <li>Duración todo el día</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/ojo-de-la-mujer-con-las-pestañas-largas-extensión-de-la-pestaña-40114594.webp" alt="Máscara de Pestañas" class="product-img">
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/archivosdemagenta/ojo-de-la-mujer-con-las-pestañas-largas-extensión-de-la-pestaña-40114594.webp" alt="Máscara de Pestañas" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Máscara de Pestañas Volumen Extreme</h3>
+                            <h4 class="product-name">Máscara de Pestañas Volumen Extreme</h4>
                             <p class="product-description">Proporciona volumen y longitud extremos sin grumos.</p>
                             <ul class="product-features">
                                 <li>Efecto volumen máximo</li>
@@ -166,11 +187,11 @@
                                 <li>Fórmula a prueba de agua</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/delineador de ojos.jpg" alt="Delineador de Ojos" class="product-img">
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/archivosdemagenta/delineador de ojos.jpg" alt="Delineador de Ojos" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Delineador Líquido de Precisión</h3>
+                            <h4 class="product-name">Delineador Líquido de Precisión</h4>
                             <p class="product-description">Punta ultrafina para un delineado perfecto y definido.</p>
                             <ul class="product-features">
                                 <li>Punta de fieltro ultrafina</li>
@@ -178,17 +199,17 @@
                                 <li>Secado rápido</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
             
             <div class="category-content" id="rostro">
-                <h3>Productos para Rostro</h3>
+                <h3 class="category-title">Productos para Rostro</h3>
                 <div class="products-grid">
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/base.jpeg" alt="Base de Maquillaje" class="product-img">
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/archivosdemagenta/base.jpeg" alt="Base de Maquillaje" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Base Líquida de Larga Duración</h3>
+                            <h4 class="product-name">Base Líquida de Larga Duración</h4>
                             <p class="product-description">Cobertura media a completa con acabado natural y mate.</p>
                             <ul class="product-features">
                                 <li>Duración hasta 24 horas</li>
@@ -196,11 +217,11 @@
                                 <li>No obstruye los poros</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/corrector.webp" alt="Corrector" class="product-img">
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/web/corrector.webp" alt="Corrector" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Corrector de Alta Cobertura</h3>
+                            <h4 class="product-name">Corrector de Alta Cobertura</h4>
                             <p class="product-description">Elimina ojeras e imperfecciones con fórmula cremosa y blendable.</p>
                             <ul class="product-features">
                                 <li>Alta cobertura</li>
@@ -208,11 +229,11 @@
                                 <li>No se acumula en líneas finas</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/rubor.jpg" alt="Rubor" class="product-img">
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/web/rubor.webp" alt="Rubor" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Rubor en Polvo Compacto</h3>
+                            <h4 class="product-name">Rubor en Polvo Compacto</h4>
                             <p class="product-description">Color natural y duradero para un aspecto fresco y saludable.</p>
                             <ul class="product-features">
                                 <li>Fácil de difuminar</li>
@@ -220,17 +241,17 @@
                                 <li>Duración todo el día</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
             
             <div class="category-content" id="brochas">
-                <h3>Brochas y Accesorios</h3>
+                <h3 class="category-title">Brochas y Accesorios</h3>
                 <div class="products-grid">
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/brochas.png" alt="Set de Brochas" class="product-img">
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/archivosdemagenta/brochas.png" alt="Set de Brochas" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Set Profesional de Brochas</h3>
+                            <h4 class="product-name">Set Profesional de Brochas</h4>
                             <p class="product-description">12 brochas de calidad profesional para un maquillaje impecable.</p>
                             <ul class="product-features">
                                 <li>Cerdas sintéticas de alta calidad</li>
@@ -238,11 +259,11 @@
                                 <li>Incluye estuche de viaje</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="pictures/archivosdemagenta/esponjas.webp" alt="Esponjas de Maquillaje" class="product-img">
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-media"><img src="pictures/web/esponjas.webp" alt="Esponjas de Maquillaje" class="product-img" loading="lazy"></div>
                         <div class="product-info">
-                            <h3 class="product-name">Esponjas Beauty Blender</h3>
+                            <h4 class="product-name">Esponjas Beauty Blender</h4>
                             <p class="product-description">Aplicación perfecta de base y corrector sin desperdiciar producto.</p>
                             <ul class="product-features">
                                 <li>Forma ergonómica</li>
@@ -250,57 +271,62 @@
                                 <li>Fácil de limpiar</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="our-brands" class="container brands-section">
-        <h2 class="section-title">Nuestras Marcas Exclusivas</h2>
-        <div class="content-box">
-            <p>Trabajamos con las mejores marcas de maquillaje para ofrecerte productos de alta calidad y rendimiento profesional.</p>
+    <section id="our-brands" class="brands-section"><div class="container">
+        <div class="section-head reveal">
+            <h2 class="section-title">Nuestras Marcas Exclusivas</h2>
+            <p class="section-lead">Trabajamos con las mejores marcas de maquillaje para ofrecerte productos de alta calidad y rendimiento profesional.</p>
+        </div>
+        <div class="section-body">
             
             <div class="brands-grid">
-                <div class="brand-card">
-                    <img src="pictures/archivosdemagenta/ARIA.png" alt="Aria Cosmetics" class="brand-logo">
+                <div class="brand-card reveal">
+                    <img src="pictures/archivosdemagenta/ARIA.png" alt="Aria Cosmetics" class="brand-logo" loading="lazy" width="1024" height="410">
                     <h3 class="brand-name">Aria Cosmetics</h3>
                     <p class="brand-description">Productos innovadores con fórmulas de última generación para un maquillaje impecable.</p>
                 </div>
-                <div class="brand-card">
-                    <img src="pictures/archivosdemagenta/DOLCEBELLA.png" alt="Dolce Bella" class="brand-logo">
+                <div class="brand-card reveal">
+                    <img src="pictures/archivosdemagenta/DOLCEBELLA.png" alt="Dolce Bella" class="brand-logo" loading="lazy" width="1024" height="410">
                     <h3 class="brand-name">Dolce Bella</h3>
                     <p class="brand-description">Elegancia y sofisticación en cada producto, diseñados para realzar tu belleza natural.</p>
                 </div>
-                <div class="brand-card">
-                    <img src="pictures/archivosdemagenta/MILS.png" alt="Mils" class="brand-logo">
+                <div class="brand-card reveal">
+                    <img src="pictures/archivosdemagenta/MILS.png" alt="Mils" class="brand-logo" loading="lazy" width="1024" height="410">
                     <h3 class="brand-name">Mils</h3>
                     <p class="brand-description">Tecnología avanzada en maquillaje profesional para resultados espectaculares.</p>
                 </div>
-                <div class="brand-card">
-                    <img src="pictures/archivosdemagenta/SALOME.png" alt="Salome" class="brand-logo">
+                <div class="brand-card reveal">
+                    <img src="pictures/archivosdemagenta/SALOME.png" alt="Salome" class="brand-logo" loading="lazy" width="1024" height="410">
                     <h3 class="brand-name">Salome</h3>
                     <p class="brand-description">Productos premium con ingredientes naturales que cuidan tu piel mientras te embellecen.</p>
                 </div>
             </div>
         </div>
+    </div>
     </section>
     
     <section id="testimonials" class="container testimonials-section">
-        <h2 class="section-title">Lo Que Dicen Nuestras Clientes</h2>
-        <div class="content-box">
-            <p>Descubre por qué miles de clientes confían en nuestros productos para su rutina de belleza diaria.</p>
+        <div class="section-head reveal">
+            <h2 class="section-title">Lo Que Dicen Nuestras Clientes</h2>
+            <p class="section-lead">Descubre por qué miles de clientes confían en nuestros productos para su rutina de belleza diaria.</p>
+        </div>
+        <div class="section-body">
             
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card reveal">
                     <p class="testimonial-text">"Los labiales líquidos de Magenta son increíbles. No se secan mis labios y duran todo el día sin necesidad de retoques."</p>
                     <p class="testimonial-author">- María G., Caracas</p>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card reveal">
                     <p class="testimonial-text">"La paleta de sombras Aria tiene una pigmentación espectacular. Los colores son vibrantes y se difuminan perfectamente."</p>
                     <p class="testimonial-author">- Carla R., Valencia</p>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card reveal">
                     <p class="testimonial-text">"Como maquilladora profesional, confío en los productos Magenta para mis clientas. Calidad y rendimiento excepcionales."</p>
                     <p class="testimonial-author">- Daniela M., Maracaibo</p>
                 </div>
@@ -309,21 +335,34 @@
     </section>
     
     <section id="special-offers" class="container offer-section">
-        <h2 class="section-title">Ofertas Especiales</h2>
-        <div class="content-box">
-            <p>Aprovecha nuestras promociones exclusivas y lleva tu maquillaje al siguiente nivel.</p>
-            
-            <div class="offer-banner">
+        <div class="section-head reveal">
+            <h2 class="section-title">Ofertas Especiales</h2>
+            <p class="section-lead">Aprovecha nuestras promociones exclusivas y lleva tu maquillaje al siguiente nivel.</p>
+        </div>
+        <div class="section-body">
+            <div class="offer-banner reveal">
                 <h3 class="offer-title">¡Llévate 3 Productos por el Precio de 2!</h3>
                 <p class="offer-description">En la compra de cualquier labial, sombra y base de maquillaje</p>
+                <a class="btn btn-offer" href="https://wa.me/584120145349" target="_blank" rel="noopener">WhatsApp</a>
             </div>
         </div>
     </section>
+    </main>
 
     <footer>
-        <div>
-            <p>&copy;Magenta Makeup C.A Todos los derechos reservados.</p>
+        <div class="container">
+            <p class="footer-mark" aria-hidden="true">We love makeup</p>
+            <div class="footer-row">
+                <p>&copy;Magenta Makeup C.A Todos los derechos reservados.</p>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index3.html">Servicios</a></li>
+                    <li><a href="index4.html">Productos</a></li>
+                    <li><a href="index1.html">Help</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
